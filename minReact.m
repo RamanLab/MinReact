@@ -15,8 +15,7 @@ function [Jmin, minReactNo] = minReact(model, GrowthRateCutoff,tol, eliList)
 % 'eliList'             List of reactions to be preserved in the minimal
 %                       metabolic network (default: 'ATPM')
 %                     
-%
-% Output:
+% Outputs:
 % Jmin                  Array of length mxn m - number of minimal reactomes
 %                       identified, n - number of reactions
 %                       Jmin is a bitwise vector consisting of
@@ -29,7 +28,7 @@ function [Jmin, minReactNo] = minReact(model, GrowthRateCutoff,tol, eliList)
 % Example:
 % [Jmin, minReactNo] = minReact(model, 0.9 ,1e-07)
 %
-%
+% Gayathri Sambamoorthy 06/01/2020
 
 if(~exist('eliList','var'))
     eliList = {'ATPM'};
