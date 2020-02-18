@@ -80,13 +80,15 @@ for noOfRxns = 1:length(pFBAOpt_Rxns)
     modelMod.lb(pFBAOpt_Rxns(noOfRxns)) = 0;
     modelMod.ub(pFBAOpt_Rxns(noOfRxns)) = 0;
     solnMod = optimizeCbModel(modelMod,'max','zero'); %Find the zero norm solution
-    Jnz = solnMod.x > tol | solnMod.x < -tol; % Identify Jnz
-    modelMod.lb(~Jnz) = 0;
-    modelMod.ub(~Jnz) = 0;
-    solnModNew = optimizeCbModel(modelMod,'max','one');
-    if solnModNew.stat==1 && round(solnModNew.f,4) >= round(GrowthRateCutoff* solnWT.f,4) 
-        JnzAll(size(JnzAll,1)+1,:) = double(Jnz)';
-        JnzRxns(length(JnzRxns)+1,1) = sum(Jnz);
+    if solnMod.f > 0
+        Jnz = abs(solnMod.x) > tol; % Identify Jnz
+        modelMod.lb(~Jnz) = 0;
+        modelMod.ub(~Jnz) = 0;
+        solnModNew = optimizeCbModel(modelMod,'max','one');
+        if solnModNew.stat==1 && round(solnModNew.f,4) >= round(GrowthRateCutoff* solnWT.f,4)
+            JnzAll(size(JnzAll,1)+1,:) = double(Jnz)';
+            JnzRxns(length(JnzRxns)+1,1) = sum(Jnz);
+        end
     end
 end
 
