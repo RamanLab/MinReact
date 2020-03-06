@@ -80,7 +80,7 @@ for noOfRxns = 1:length(pFBAOpt_Rxns)
     modelMod.lb(pFBAOpt_Rxns(noOfRxns)) = 0;
     modelMod.ub(pFBAOpt_Rxns(noOfRxns)) = 0;
     solnMod = optimizeCbModel(modelMod,'max','zero'); %Find the zero norm solution
-    if solnMod.f > 0
+    if solnMod.f > 0 && nnz(solnMod.x(rxnsNotToRemove)) == length(rxnsNotToRemove)
         Jnz = abs(solnMod.x) > tol; % Identify Jnz
         modelMod.lb(~Jnz) = 0;
         modelMod.ub(~Jnz) = 0;
