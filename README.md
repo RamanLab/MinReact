@@ -10,7 +10,7 @@ To perform synthetic lethality analysis using Fast-SL the following tools are ne
 
 ### Citing Fast-SL
 If you use MinReact in your work, please cite
->Gayathri Sambamoorthy and Karthik Raman (2020) "MinReact: a systematic approach for identifying minimal metabolic networks" _Bioinformatics_ **36** [doi:10.1093/bioinformatics/btaa497](https://academic.oup.com/bioinformatics/article/31/20/3299/195638/Fast-SL-an-efficient-algorithm-to-identify)
+>Gayathri Sambamoorthy and Karthik Raman (2020) "MinReact: a systematic approach for identifying minimal metabolic networks" _Bioinformatics_ **36** [doi:10.1093/bioinformatics/btaa497](https://dx.doi.org/10.1093/bioinformatics/btaa497)
 
 
 
