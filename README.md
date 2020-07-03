@@ -8,7 +8,7 @@ To perform synthetic lethality analysis using Fast-SL the following tools are ne
 2. A linear programming (LP) solver such as [Gurobi](http://www.gurobi.com/), [GLPK](https://www.gnu.org/software/glpk/) etc.
 3. CPLEX v12.0 or higher for the parallel version of Fast-SL. For the serial version of Fast-SL, any COBRA-supported solver can be used. [CPLEX is available free for academics from IBM](https://ibm.onthehub.com/WebStore/ProductSearchOfferingList.aspx?srch=cplex)
 
-### Citing Fast-SL
+### Citing MinReact
 If you use MinReact in your work, please cite
 >Gayathri Sambamoorthy and Karthik Raman (2020) "MinReact: a systematic approach for identifying minimal metabolic networks" _Bioinformatics_ **36** [doi:10.1093/bioinformatics/btaa497](https://dx.doi.org/10.1093/bioinformatics/btaa497)
 
